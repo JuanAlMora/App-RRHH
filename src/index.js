@@ -19,6 +19,7 @@ app.engine('.hbs', exphbs.engine({
 app.set('view engine','.hbs');
 
 
+
 //Middlewares
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: true})) //acepta desde el formulario los datos con extension.
@@ -33,9 +34,12 @@ app.use((req,res,next) => {
 app.use(require('./routes/index'));
 app.use(require('./routes/authentication'));
 app.use('/links',require('./routes/links'));
+app.use(require('./routes/certificados'));
 
 //Publics
 app.use(express.static(path.join(__dirname,'public')));
+
+
 //Starting the server
 app.listen(app.get('port'),()=> {
     console.log('Server on port', app.get('port'));
