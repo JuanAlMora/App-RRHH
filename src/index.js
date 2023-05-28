@@ -38,7 +38,7 @@ app.use(require('./routes/certificados'));
 
 //Publics
 app.use(express.static(path.join(__dirname,'public')));
-
+app.use('/docs', express.static(path.join(__dirname, 'docs')));
 
 //Starting the server
 app.listen(app.get('port'),()=> {
