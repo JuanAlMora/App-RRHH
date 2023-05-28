@@ -45,7 +45,7 @@ const generarCertificado = async (req, res, next) => {
     .then((result) => {
       // Set the appropriate headers for file download
       res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', 'attachment; filename=example.pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
 
       // Stream the PDF file to the response
       fs.createReadStream(result.filename).pipe(res);
