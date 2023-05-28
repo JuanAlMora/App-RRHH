@@ -7,6 +7,11 @@ const certificados = (req, res, next) => {
 } 
 
 
+const generarCertificado = async (req, res, next) => {
+    const html = fs.readFileSync(path.join(__dirname, '../views/vistasCertificados/template.html'), 'utf-8');
+    const filename = Math.random() + '_doc' + '.pdf';
+}
+
 module.exports = {
     certificados
 }
