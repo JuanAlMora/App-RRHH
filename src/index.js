@@ -12,13 +12,10 @@ app.set('views',path.join(__dirname,'views'));
 app.engine('.hbs', exphbs.engine({
     defaultLayout: 'main',
     layoutDir: path.join(app.get('views'),'layouts'),
-    partialsDir: path.join(app.get('views'),'partials'),
     extname: '.hbs',
     helpers: require('./lib/handlebars')
 }));
 app.set('view engine','.hbs');
-
-
 
 //Middlewares
 app.use(morgan('dev'));
@@ -33,8 +30,7 @@ app.use((req,res,next) => {
 //Routes
 app.use(require('./routes/index'));
 app.use(require('./routes/authentication'));
-app.use('/links',require('./routes/links'));
-app.use(require('./routes/certificados'));
+app.use(require('./routes/certifications'));
 
 //Publics
 app.use(express.static(path.join(__dirname,'public')));
