@@ -3,7 +3,6 @@ const pdf = require('pdf-creator-node');
 const path = require('path');
 const { body } = require('express-validator');
 
-
 const options = {
     formate: 'A3',
     orientation: 'portrait',
@@ -37,8 +36,8 @@ const generarCertificado = async (req, res, next) => {
         html: htmlFile,
         path: './src/docs/' + filename,
         data: {
-            name: 'John Doe',
-            id: '1234567890',
+            name: req.body.Nombre,
+            id: req.body.Documento,
             date: '2020-10-20'
         }
     }

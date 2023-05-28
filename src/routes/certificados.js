@@ -8,9 +8,14 @@ const { certificados, generarCertificado } = require('../controllers/certificado
 
 router.get('/certificados', certificados);
 router.post('/download', generarCertificado, (req, res) => {
-    res.send(req.body)
+    const {nombre,id,tipo} = req.body;
+    const newCertificado = {
+        nombre,
+        id,
+        tipo
+    };
 });
 
 
 
-module.exports =  router;
+module.exports =  router
