@@ -42,17 +42,18 @@ const generarCertificado = async (req, res, next) => {
     }
 
     pdf.create(document, options)
-        .then(res => {
-            console.log(res);
-        }).catch(error => {
-            console.log(error);
-        });
-        
-        const filepath = 'http://localhost:3000/src/docs/' + filename;
+    .then((result) => {
+      // Set the appropriate headers for file download
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', 'attachment; filename=example.pdf');
 
-        res.render('vistascertificados/download.hbs', {
-            path: filepath
-        });
+      // Stream the PDF file to the response
+      fs.createReadStream(result.filename).pipe(res);
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).send('An error occurred while generating the PDF');
+    });
 }
 
 
