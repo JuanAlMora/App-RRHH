@@ -32,48 +32,37 @@
                 </div>
             </div>
             <div class="col-7 col-sm-8 col-md-9 col-lg-10 col-xl-10 col-xxl-11 offset-lg-3" id="ColumnaPrincipal" style="margin-left: 0px;padding-left: 0px;padding-right: 0px;margin-right: 0px;padding-bottom: 0px;margin-bottom: 0px;">
-                <form style="margin-top: 50px;margin-left: 100px;" method="POST" action="">
-                    <div class="card" style="padding-left: 22px;margin-left: 19px;width: 1000px;">
-                        <div class="card-body" style="padding-left: 0px;margin-left: 10px;padding-right: 0px;margin-right: 10px;">
-                            <h6><span style="color: rgb(1, 120, 239);">Complete los campos requeridos*</span></h6>
-                            <div class="row" id="fila1">
-                                <div class="col" id="colFoto">
-                                    <div><img style="width: 250px;height: 250px;margin: 10px;" width="250" height="242"></div>
-                                </div>
-                                <div class="col align-items-center align-items-stretch" id="col2">
-                                    <div class="row" id="rowSalario">
-                                        <div class="col" id="colSalario">
-                                            <div><label class="form-label"><strong>Nombre: *</strong></label><input class="form-control" type="text" placeholder="Nombre completo" required=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="row" id="rowDeduccion">
-                                        <div class="col" id="colDeduccion" style="margin-top: 30px;">
-                                            <div><label class="form-label"><strong>Tipo de certificado:</strong>&nbsp;*<select class="form-select" style="width: 190%;">
-                                                        <optgroup label="This is a group">
-                                                            <option value="12" selected="">This is item 1</option>
-                                                            <option value="13">This is item 2</option>
-                                                            <option value="14">This is item 3</option>
-                                                        </optgroup>
-                                                    </select></label></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col" id="col3">
-                                    <div class="row">
-                                        <div class="col">
-                                            <div><label class="form-label"><strong>No. de documento: *</strong></label><input class="form-control" type="text" placeholder="1007007007" required=""></div>
+                <div class="card">
+                    <div class="card-body">
+                        <section class="py-4 py-xl-5">
+                            <div class="container">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+                                        <div class="card mb-5">
+                                            <div class="card-body p-sm-5">
+                                                <h2 class="text-center mb-4">Generar Certificado</h2>
+                                                <form method="post" action="/download">
+                                                    <div class="mb-3"><label class="form-label">Nombre completo*</label><input class="form-control" type="text" id="name-2" name="Nombre" placeholder="Nombre" required=""></div>
+                                                    <div class="mb-3"><label class="form-label">Documento*</label><input class="form-control" type="text" id="name-1" name="Documento" placeholder="Documento" required=""></div>
+                                                    <div class="mb-3"><label class="form-label">Tipo de certificado*</label><select class="form-select" name="Tipo" required="">
+                                                            <optgroup label="This is a group">
+                                                                <option value="12" selected="">This is item 1</option>
+                                                                <option value="13">This is item 2</option>
+                                                                <option value="14">This is item 3</option>
+                                                            </optgroup>
+                                                        </select></div>
+                                                    <div><button class="btn btn-success d-block w-100" type="submit">Guardar y descargar</button>
+                                                        <div><button class="btn btn-danger d-block w-100" type="reset" style="margin-top: 15px;">Limpiar campos</button></div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div id="botonesFormulario"><button class="btn btn-success" type="submit" style="margin-right: 40px;">Guardar</button><button class="btn btn-danger" type="reset">Finalizar cambios</button></div>
-                                </div>
-                            </div>
-                        </div>
+                        </section>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

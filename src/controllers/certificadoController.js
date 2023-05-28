@@ -1,6 +1,7 @@
 const fs = require('fs');
 const pdf = require('pdf-creator-node');
 const path = require('path');
+const { body } = require('express-validator');
 
 
 const options = {
@@ -28,6 +29,7 @@ const certificados = (req, res, next) => {
 
 
 const generarCertificado = async (req, res, next) => {
+    console.log(req.body)
     const htmlFile = fs.readFileSync(path.join(__dirname, '../views/vistascertificados/template.html'), 'utf-8');
     const filename = Math.random() + '_doc' + '.pdf';
     
