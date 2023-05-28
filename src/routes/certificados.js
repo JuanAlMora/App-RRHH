@@ -9,4 +9,9 @@ const { certificados, generarCertificado } = require('../controllers/certificado
 router.get('/certificados', certificados);
 router.get('/download', generarCertificado);
 
+router.post('/certificados', (req, res) => {
+    res.send("recieved")
+});
+
+
 module.exports =  router;
