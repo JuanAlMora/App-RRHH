@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>RRHH</title>
+    <title>RRHH2</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/typicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
@@ -18,7 +18,7 @@
         <div class="row" style="width: 100%;height: 110px;">
             <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1" style="width: 100.5px;padding-right: 0px;padding-left: 0px;background: #484850;"><img width="95" height="99" src="assets/img/RRHH%20App.png" style="width: 100%;"></div>
             <div class="col" id="tituloPagina" style="padding-left: 0px;background: #484850;padding-right: 0px;margin-right: 0px;width: 120%;">
-                <h1 id="tituloCandidatos"><span style="color: rgb(255, 255, 255);">NUEVA HOJA DE VIDA&nbsp;</span></h1>
+                <h1 id="tituloCandidatos"><span style="color: rgb(255, 255, 255);">EDITAR PERFIL CANDIDATO</span></h1>
             </div>
         </div>
         <div class="row" style="padding-bottom: 0px;margin-bottom: 0px;margin-right: 0px;margin-left: 0px;width: 100%;height: 100%;">
@@ -35,7 +35,6 @@
                 <form style="margin-top: 61px;">
                     <div class="card" style="padding-left: 22px;margin-left: 19px;">
                         <div class="card-body" style="padding-left: 0px;margin-left: 10px;padding-right: 0px;margin-right: 10px;">
-                            <h2 class="card-title"><strong>Nuevo candidato</strong></h2>
                             <h6><span style="color: rgb(1, 120, 239);">Complete los campos requeridos*</span></h6>
                             <div class="row" id="fila1">
                                 <div class="col" id="colNombre">
@@ -53,10 +52,10 @@
                                     <div><label class="form-label"><strong>Documento: *</strong></label><input class="form-control" type="text" placeholder="Documento de identidad" required=""></div>
                                 </div>
                                 <div class="col" id="colTelefono">
-                                    <div><label class="form-label"><strong>Telefono: *</strong></label><input class="form-control" type="text" placeholder="Telefono" required=""></div>
+                                    <div><label class="form-label"><strong>Telefono/celular: *</strong></label><input class="form-control" type="text" placeholder="Telefono" required=""></div>
                                 </div>
                                 <div class="col" id="colVacante">
-                                    <div><label class="form-label"><strong>Vacante a la que aspira *</strong></label><select class="form-select" required="">
+                                    <div><label class="form-label"><strong>Vacante*</strong></label><select class="form-select" required="">
                                             <option value="12" selected="">Vacante1</option>
                                             <option value="13">Vacante2</option>
                                             <option value="14">Vacante3</option>
@@ -65,29 +64,29 @@
                             </div>
                             <div class="row" id="fila3">
                                 <div class="col" id="colCedula">
-                                    <div><label class="form-label"><strong>Copia de la cedula(.pdf): *</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);" required=""></div>
+                                    <div><label class="form-label"><strong>Copia de la cedula(.pdf): *</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);" required="" accept=".pdf"></div>
                                 </div>
                                 <div class="col" id="colCV">
-                                    <div><label class="form-label"><strong>Hoja de vida CV(.pdf) *</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);" required=""></div>
+                                    <div><label class="form-label"><strong>Hoja de vida CV(.pdf) *</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);" required="" accept=".pdf"></div>
                                 </div>
                                 <div class="col" id="colLIbreta">
-                                    <div><label class="form-label"><strong>Libreta Militar(.pdf):&nbsp;</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);"></div>
+                                    <div><label class="form-label"><strong>Libreta Militar(.pdf):&nbsp;</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);" accept=".pdf"></div>
                                 </div>
                             </div>
                             <div class="row" id="fila4">
                                 <div class="col" id="colFoto">
-                                    <div><label class="form-label"><strong>Fotografía (.jpg o .png) *</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);" required=""></div>
+                                    <div><label class="form-label"><strong>Fotografía (.jpg o .png) *</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);" required="" accept=".jpg,.png"></div>
                                 </div>
                                 <div class="col" id="colPension">
-                                    <div><label class="form-label"><strong>Certificado de pensión(.pdf):</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);"></div>
+                                    <div><label class="form-label"><strong>Certificado de pensión(.pdf):</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);" accept=".pdf"></div>
                                 </div>
                                 <div class="col" id="colEPS">
-                                    <div><label class="form-label"><strong>Certificado de EPS(.pfd):</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);"></div>
+                                    <div><label class="form-label"><strong>Certificado de EPS(.pfd):</strong></label><input class="form-control" type="file" style="background: rgb(216,235,253);" accept=".pdf"></div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <div id="botonesFormulario"><button class="btn btn-success" type="submit" style="margin-right: 40px;">Confirmar</button><button class="btn btn-danger" type="reset">Limpiar</button></div>
+                                    <div id="botonesFormulario"><button class="btn btn-success" type="submit" style="margin-right: 40px;">Guardar y confirmar</button><button class="btn btn-danger" type="reset">Borrar campos</button></div>
                                 </div>
                             </div>
                         </div>
