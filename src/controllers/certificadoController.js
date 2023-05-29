@@ -23,13 +23,13 @@ const options = {
 }
 
 const certificados = (req, res, next) => {
-    res.render('vistasCertificados/moduloCertificaciones.hbs')
+    res.render('certificados/certificados_mod.hbs')
 };
 
 
 const generarCertificado = async (req, res, next) => {
     console.log(req.body)
-    const htmlFile = fs.readFileSync(path.join(__dirname, '../views/vistascertificados/template.html'), 'utf-8');
+    const htmlFile = fs.readFileSync(path.join(__dirname, '../views/certificados/template.html'), 'utf-8');
     const filename = Math.random() + '_doc' + '.pdf';
     
     const document = {
@@ -38,7 +38,7 @@ const generarCertificado = async (req, res, next) => {
         data: {
             name: req.body.Nombre,
             id: req.body.Documento,
-            date: '2020-10-20'
+            date: req.body.Fecha
         }
     }
 

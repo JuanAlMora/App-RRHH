@@ -28,9 +28,16 @@ app.use((req,res,next) => {
 })
 
 //Routes
-app.use(require('./routes/index'));
+app.use(require('./routes/login'));
 app.use(require('./routes/authentication'));
 app.use(require('./routes/certifications'));
+app.use(require('./routes/afiliations'));
+app.use(require('./routes/main_menu'));
+app.use(require('./routes/cand_menu'));
+app.use(require('./routes/list_cand_cv'));
+app.use(require('./routes/new_cand'));
+app.use(require('./routes/emp_menu'));
+app.use(require('./routes/list_emp_cv'));
 
 //Publics
 app.use(express.static(path.join(__dirname,'public')));

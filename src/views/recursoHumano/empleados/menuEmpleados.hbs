@@ -1,8 +1,8 @@
- <div class="container" id="contenedorPrincipal" style="padding-left: 0px;margin-left: 0px;width: 130%;padding-right: 0px;padding-top: 0px;margin-top: 0px;margin-right: -1px;max-width: 100%;">
+<div class="container" id="contenedorPrincipal" style="padding-left: 0px;margin-left: 0px;width: 130%;padding-right: 0px;padding-top: 0px;margin-top: 0px;margin-right: -1px;max-width: 100%;">
         <div class="row" style="width: 100%;height: 110px;">
             <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1" style="width: 100.5px;padding-right: 0px;padding-left: 0px;background: #484850;"><img width="95" height="99" src="assets/img/RRHH%20App.png" style="width: 100%;"></div>
             <div class="col" id="tituloPagina" style="padding-left: 0px;background: #484850;padding-right: 0px;margin-right: 0px;width: 120%;">
-                <h1 id="tituloCandidatos"><span style="color: rgb(255, 255, 255);">CERTIFICADOS</span></h1>
+                <h1 id="tituloCandidatos"><span style="color: rgb(255, 255, 255);">EMPLEADOS</span></h1>
             </div>
         </div>
         <div class="row" style="padding-bottom: 0px;margin-bottom: 0px;margin-right: 0px;margin-left: 0px;width: 100%;height: 100%;">
@@ -16,32 +16,22 @@
                 </div>
             </div>
             <div class="col-7 col-sm-8 col-md-9 col-lg-10 col-xl-10 col-xxl-11 offset-lg-3" id="ColumnaPrincipal" style="margin-left: 0px;padding-left: 0px;padding-right: 0px;margin-right: 0px;padding-bottom: 0px;margin-bottom: 0px;">
-                <div class="card">
-                    <div class="card-body">
-                        <section class="py-4 py-xl-5">
-                            <div class="container">
-                                <div class="row d-flex justify-content-center">
-                                    <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4">
-                                        <div class="card mb-5">
-                                            <div class="card-body p-sm-5">
-                                                <h2 class="text-center mb-4">Generar Certificado</h2>
-                                                <form method="post" action="/download">
-                                                    <div class="mb-3"><label class="form-label">Nombre completo*</label><input class="form-control" type="text" id="name-2" name="Nombre" placeholder="Nombre" required=""></div>
-                                                    <div class="mb-3"><label class="form-label">Documento*</label><input class="form-control" type="text" id="name-1" name="Documento" placeholder="Documento" required=""></div>
-                                                    <div class="mb-3"><label class="form-label">Fecha*</label><input class="form-control" type="date" name="Fecha"></div>
-                                                        </select></div>
-                                                    <div><button class="btn btn-success d-block w-100" type="submit">Guardar y descargar</button>
-                                                        <div><button class="btn btn-danger d-block w-100" type="reset" style="margin-top: 15px;">Limpiar campos</button></div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="container" id="menuHerramientas" style="height: 200px;margin-top: 100px;width: 657px;">
+                    <div class="row" id="fila1" style="width: 100%;padding-top: 0px;margin-top: 0px;padding-right: 0px;margin-right: 0px;margin-left: 0px;">
+                        <div class="col-4" id="colCandidatos" style="margin-right: 0px;width: auto;padding-left: 177px;"><a href="/ListaEmpleados" style="color: #ffffff;background: rgba(0,74,124,0);width: 180px;height: auto;border-style: none;border-color: rgba(255,255,255,0);text-decoration: none;text-align: center;">
+                                <div class="botonMenus" style="width: 180px;height: 300px;background: #004a7c;border-radius: 10px;padding-bottom: 0px;margin-bottom: 17px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person-lines-fill" style="font-size: 144px;padding-right: 0px;margin-right: 11px;padding-left: 24px;padding-top: 16px;margin-top: 14px;padding-bottom: 0px;margin-bottom: 22px;">
+                                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"></path>
+                                    </svg>
+                                    <p>Hojas de vida</p>
                                 </div>
-                            </div>
-                        </section>
+                            </a></div>
+                        <div class="col-xl-4 col-xxl-4" id="colEmpleados" style="width: auto;"><a href="" style="color: #ffffff;background: rgba(0,74,124,0);width: 180px;height: auto;border-style: none;border-color: rgba(255,255,255,0);text-decoration: none;text-align: center;">
+                                <div class="botonMenus" style="width: 180px;height: 300px;background: #004a7c;border-radius: 10px;padding-bottom: 0px;margin-bottom: 17px;">
+                                    <p><i class="fas fa-file-contract" style="font-size: 121px;margin-top: 32px;margin-bottom: 27px;padding-bottom: 0px;"></i>&nbsp; Contratación</p>
+                                </div>
+                            </a></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>                
+    </div>

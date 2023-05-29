@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Certificado de Empleo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-  <div>
-    <h2>Certificado de Empleo</h2>
-    <p>Este certificado se otorga a:</p>
-    <h3>Nombre del Empleado: {{name}} </h3>
-    <h3>Identificación del Empleado: {{id}}</h3>
-    <p>Por su destacada labor y contribución en la empresa.</p>
-    <p>Fecha de Emisión: {{date}}</p>
-  </div>
+    <div class="card" style="border-color: rgba(255,255,255,0);">
+        <div class="card-body" style="border-color: rgba(0,0,0,0);">
+            <h3 class="text-center card-title" style="font-weight: bold;">CERTIFICADO DE EMPLEO</h3>
+            <hr>
+            <p class="text-center" style="margin: 0px;margin-top: 32px;font-size: 15px;">EL QUE SUSCRIBE TITULAR GERENTE DE LA EMPRESA ZONANGA CONTRSTISTAS GENERALES E.I.R.L</p>
+            <h4 class="text-center" style="border-color: rgba(33,37,41,0);margin: 26px;">Certifica que:</h4>
+            <p class="text-center">Que el señor/a {{name}} , identificado con las cédula nro: {{id}}  , se encuentra a día de hoy {{date}}  laborando en nuestra empresa.</p>
+            <div class="text-center"></div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>
