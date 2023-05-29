@@ -7,8 +7,7 @@ router.get('/NuevoCandidato', (req, res) => {
 })
 
 router.post('/NuevoCandidato', async (req, res) => {
-    const {nombre, correo, direcccion, documento, telefono, 
-        copia_cedula, cv, libreta_militar, foto, certificado_pension, certificado_eps} = req.body
+    const {nombre, correo, direcccion, documento, telefono, copia_cedula, cv, libreta_militar, foto, certificado_pension, certificado_eps} = req.body
     
     const newCand = {
         nombre,
