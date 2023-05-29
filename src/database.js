@@ -1,26 +1,18 @@
 const mysql = require('mysql');
-const {promisify} = require('util');
-const {database} = require('./keys')
 
-const pool = mysql.createPool(database);
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'Testguy',
+    password: '123',
+    database: 'rrhh_db'
+  });
 
-pool.getConnection((err, connection) => {
-    if(err){
-        if(err.code === 'PROTOCOL_CONNECTION_LOST'){
-            console.error('DATABASE CONNECTION WAS CLOSED');
-        }
-        if(err.code === 'ER_CON_COUNT_ERROR'){
-            console.error('DATABASE HAS TO MANY CONNECTIONS');
-        }
-        if(err.code === 'ECONNREFUSED'){
-            console.error('DATABASE CONNECTION WAS REFUSED');
-        }
+  connection.connect((error) => {
+    if (error) {
+      console.error('Error connecting to the database:', error);
+    } else {
+      console.log('Connected to the database!');
     }
-
-    if(connection) connection.release();
-    console.log('DATABASE CONNECTION ESTABLISHED');
-});
-
-promisify(pool.query);
-
-module.exports = pool;
+  });
+    
+module.exports = connection;
