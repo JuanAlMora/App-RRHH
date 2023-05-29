@@ -31,6 +31,9 @@ app.use((req,res,next) => {
 app.use(require('./routes/index'));
 app.use(require('./routes/authentication'));
 app.use(require('./routes/certifications'));
+app.use(require('./routes/login'));
+app.use(require('./routes/main_menu'));
+app.use(require('./routes/new_cand'));
 
 //Publics
 app.use(express.static(path.join(__dirname,'public')));
