@@ -10,8 +10,5 @@ router.get('/ListaCandidatos', (req, res) => {
         res.render('recursoHumano/candidatos/listaHojaVidaCandidato.hbs', {rows})
     })
 })
-        
-
-
 
 module.exports = router;
