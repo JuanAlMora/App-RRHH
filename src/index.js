@@ -44,6 +44,7 @@ app.use(require('./routes/list_emp_cv'));
 app.use(require('./routes/emp_detail'));
 app.use(require('./routes/emp_edit'));
 app.use(require('./routes/emp_delete'));
+app.use(require('./routes/paycheck_menu'));
 
 //Publics
 app.use(express.static(path.join(__dirname,'public')));
