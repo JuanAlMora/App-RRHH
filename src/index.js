@@ -36,8 +36,14 @@ app.use(require('./routes/main_menu'));
 app.use(require('./routes/cand_menu'));
 app.use(require('./routes/list_cand_cv'));
 app.use(require('./routes/new_cand'));
+app.use(require('./routes/cand_detail'));
+app.use(require('./routes/cand_edit'));
+app.use(require('./routes/cand_delete'));
 app.use(require('./routes/emp_menu'));
 app.use(require('./routes/list_emp_cv'));
+app.use(require('./routes/emp_detail'));
+app.use(require('./routes/emp_edit'));
+app.use(require('./routes/emp_delete'));
 
 //Publics
 app.use(express.static(path.join(__dirname,'public')));
