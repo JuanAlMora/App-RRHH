@@ -11,7 +11,6 @@ router.post('/NuevoCandidato', async (req, res) => {
     const empleado = 0;
     const Nomina_id = parseInt(vacante);
     const Usuario_Gestor_id = 1;
-    const Usuario_Gestor_Administrador_id = 1;
 
     const newCand = {
         nombre,
@@ -28,11 +27,10 @@ router.post('/NuevoCandidato', async (req, res) => {
         certificado_eps,
         Nomina_id,
         Usuario_Gestor_id,
-        Usuario_Gestor_Administrador_id
     }
 
     connection.query('INSERT INTO recurso_humano set ?', [newCand]);
-    res.redirect('/NuevoCandidato');
+    res.redirect('/listaCandidatos');
 })
 
 module.exports = router;
