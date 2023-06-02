@@ -2,9 +2,8 @@ const express = require('express');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
-
-//Initializations
 const app = express();
+//Initializations
 
 //Settings
 app.set('port', process.env.PORT || 3000);
@@ -45,6 +44,8 @@ app.use(require('./routes/emp_detail'));
 app.use(require('./routes/emp_edit'));
 app.use(require('./routes/emp_delete'));
 app.use(require('./routes/paycheck_menu'));
+app.use(require('./routes/vacancies'));
+app.use(require('./routes/add_vacancy'));
 
 //Publics
 app.use(express.static(path.join(__dirname,'public')));
