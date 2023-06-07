@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const app = express();
+const bot = require('./controllers/bot.js');
 //Initializations
 
 //Settings
@@ -51,7 +52,8 @@ app.use(require('./routes/add_vacancy'));
 app.use(express.static(path.join(__dirname,'public')));
 app.use('/docs', express.static(path.join(__dirname, '/src/docs')));
 
-//Starting the server
+//Starting the server and bot
+bot.launch();
 app.listen(app.get('port'),()=> {
     console.log('Server on port', app.get('port'));
 });
