@@ -1,0 +1,29 @@
+Comandos para el bot:
+
+/start -> muestra el menú inicial  DONE
+/help ->muestra el menu inicial  DONE
+	/candidatos -> abre el menú candiato DONE
+		/hojas -> abre instrcutivo de hojas de vida. DONE
+			/crearH -> como crear una hoja de vida.
+			/consultarH -> como consultar una hoja de vida.
+			/actualizarH -> como actuliaziar o editar una hoja de vida.
+			/eliminarH -> como eliminar una hoja de vida
+
+
+
+
+
+		/vacantes -> abre instructivo de vacantes. DONE
+		/pruebas -> abre instructivo de pruebas psicotecnicas. ON WAIT
+		/antecedentes -> abre instructivo de antecedentes.
+		/examenes -> abre instructivo de examenes médicos.
+		/contratos -> abre instructivo de contratación.
+
+	/empleados -> abre el menú de empleado
+		/hojas -> abre instrcutivo de hojas de vida. DONE
+			/crearH -> como crear una hoja de vida.
+			/consultarH -> como consultar una hoja de vida.
+			/actualizarH -> como actuliaziar o editar una hoja de vida.
+			/eliminarH -> como eliminar una hoja de vida
+
+ 
