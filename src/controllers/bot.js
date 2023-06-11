@@ -25,16 +25,10 @@ bot.hears(
   }
 );
 
-
-
-//comandos para el modulo de candidatos
-
-
 //menú candidatos
 bot.command('candidatos', (ctx) => {
   ctx.replyWithMarkdown('🤖*Bienvenido al modulo de candidatos*🤖\n\nPara instrucciones sobre un proceso ingresa el comando correspondiente:\n\n🔹Hojas de vida: /hojas \n🔹Manejo de Vacantes: /vacantes\n🔹Pruebas Psicotécnicas: /pruebas\n🔹Consultar antecedentes: /antecendentes\n🔹Cargar examenes medicos: /examenes\n🔹Contratación: /contratos\n\n❓Ingresa el comando /candidatos para volver a ver este mensaje');
 });
-
 
 //hojas de vida
 bot.command('hojas', (ctx) => {
@@ -44,9 +38,15 @@ bot.command('hojas', (ctx) => {
 bot.command('crearH', (ctx) => {
   ctx.replyWithMarkdown('🤖*Creación de hojas de vida*🤖\n\nPara crear una hoja de vida haz click en el botón "Agregar Candidato" de la parte superior derecha de tu pantalla dentro del modulo de hojas de vida y a continuación ingresa la información solicitada, ahora tu nueva hoja de vida deberá aparecer en la lista.');
 });
-bot.command('consultarH', (ctx) => {});
-bot.command('actualizarH', (ctx) => {});
-bot.command('eliminarH', (ctx) => {});
+bot.command('consultarH', (ctx) => {
+  ctx.replyWithMarkdown('🤖*Consulta de hojas de vida*🤖\n\nPara consultar una hoja de vida haz click en el botón con el ojo de la parte derecha de la lista de candidatos, ahora deberían mostrarse toda la información registrada.');
+});
+bot.command('actualizarH', (ctx) => {
+  ctx.replyWithMarkdown('🤖*Actualización de hojas de vida*🤖\n\nPara actualizar una hoja de vida haz click en el botón con el lápiz de la parte derecha de la lista de candidatos o enditar candidato desde la vista de detalles, ahora deberían mostrarse toda la información registrada y podrás modificarla.');
+});
+bot.command('eliminarH', (ctx) => {
+  ctx.replyWithMarkdown('🤖*Eliminación de hojas de vida*🤖\n\nPara eliminar una hoja de vida haz click en el botón con basurero de la parte derecha de la lista de candidatos, ahora debería desaparecer de la lista.');
+});
 
 //vacantes
 bot.command('vacantes', (ctx) => {
@@ -58,9 +58,25 @@ bot.command('pruebas', (ctx) => {
   ctx.replyWithMarkdown('*Bienvenido al modulo de pruebas psicotécnicas*🤖\n\nEste modulo aún no está hecho, así que no sé como funciona 🚫');
 });
 
+//Consulta de antecedentes
+bot.command('antecedentes', (ctx) => {
+  ctx.replyWithMarkdown('🤖*Consulta de antecedentes*🤖\n\nPara consultar los antecedentes penales de un candidato da click en el botón de antecedentes desde el menú de candidatos, a continuación serás redirigido a la página de la policía donde debes seguir las instrucciones que allá se indican');
+});
 
+//Examanes
+bot.command('examenes', (ctx) => {
+  ctx.replyWithMarkdown('🤖*Carga de examanes médicos*🤖\n\nEste módulo aún no está hecho, así que no sé como funciona 🚫')
+});
 
+//Contratación
+bot.command('contratos' , (ctx) => {
+  ctx.replyWithMarkdown('🤖*Modulo de contratación*🤖\n\nEste módulo aún no está hecho, así que no sé como funciona 🚫')
+});
 
+//menú Empleados
+bot.command('empleados',(ctx)=>{
+  ctx.replyWithMarkdown('🤖*Bienvenido al modulo de Empleados*🤖\n\nPara instrucciones sobre un proceso ingresa el comando correspondiente:\n\n🔹Hojas de vida: /hojas\n🔹Contratación: /contratos\n\n❓Ingresa el comando /empleados para volver a ver este mensaje')
+});
 
 
 
