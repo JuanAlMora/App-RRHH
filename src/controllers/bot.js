@@ -38,17 +38,19 @@ bot.command('candidatos', (ctx) => {
 
 //hojas de vida
 bot.command('hojas', (ctx) => {
-  ctx.replyWithMarkdown('🤖*Bienvenido al modulo de hojas de vida*🤖\n\nPara instrucciones sobre un proceso ingresa el comando correspondiente:\n\n🔹Crear hoja de vida: /crearH \n🔹Consultar hoja de vida: /consultarH\n🔹Actualizar hoja de vida: /actualizarH\n🔹Eliminar hoja de vida: /eliminarH\n\n❓Ingresa el comando /hojas para volver a ver este mensaje');
+  ctx.replyWithMarkdown('🤖*Bienvenido al modulo hojas de vida*🤖\n\nPara instrucciones sobre un proceso ingresa el comando correspondiente:\n\n🔹Crear hoja de vida: /crearH \n🔹Consultar hoja de vida: /consultarH\n🔹Actualizar hoja de vida: /actualizarH\n🔹Eliminar hoja de vida: /eliminarH\n\n❓Ingresa el comando /hojas para volver a ver este mensaje');
 });
 
-bot.command('crearH', (ctx) => {});
+bot.command('crearH', (ctx) => {
+  ctx.replyWithMarkdown('🤖*Creación de hojas de vida*🤖\n\nPara crear una hoja de vida haz click en el botón "Agregar Candidato" de la parte superior derecha de tu pantalla dentro del modulo de hojas de vida y a continuación ingresa la información solicitada, ahora tu nueva hoja de vida deberá aparecer en la lista.');
+});
 bot.command('consultarH', (ctx) => {});
 bot.command('actualizarH', (ctx) => {});
 bot.command('eliminarH', (ctx) => {});
 
 //vacantes
 bot.command('vacantes', (ctx) => {
-  ctx.replyWithMarkdown('🤖*Bienvenido al modulo de manejo de vacantes*🤖\n\nPara agregar una vacante haz click en el botón de la parte superior derecha de tu pantalla dentro del modulo de vacantes y a continuación ingresa la información solicitada, ahora tu nueva vacante deberá aparecer en la lista y podrá ser asignada a un nuevo contrato.');
+  ctx.replyWithMarkdown('🤖*Manejo de vacantes*🤖\n\nPara agregar una vacante haz click en el botón con el + de la parte superior izquierda de tu pantalla dentro del modulo de vacantes y a continuación ingresa la información solicitada, ahora tu nueva vacante deberá aparecer en la lista y podrá ser asignada a un nuevo contrato.');
 });
 
 //pruebas psicotécnicas
