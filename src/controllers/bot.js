@@ -110,15 +110,6 @@ bot.command('certificaciones',(ctx)=>{
   ctx.replyWithMarkdown('🤖*Modulo de Certificaciones*🤖\n\nPara generar un certificado de empleo, ingresa la información del empleado solicitada y da click a descargar, el certificado se descargará automaticamente en tu computador.')
 });
 
-
-
-
-
-
-
-
-
-
 //Respuesta a stickers
 bot.on('sticker', (ctx) => {
   // Code to handle the received sticker
