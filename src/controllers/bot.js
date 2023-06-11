@@ -6,12 +6,14 @@ const bot = new Telegraf(botToken);
 
 //Comando /start
 bot.start((ctx) => {
-    ctx.replyWithMarkdown('🤖*Bienvenido a RRHH BOT*🤖\nEstoy dispuesto ayudarte si tienes dudas sobre la applicación.\n\nPara instrucciones sobre un modulo ingresa el comando correspondiente:\n\n🔹Candidatos: /candidatos \n🔹Empleados: /empleados\n🔹Seguridad social: /afiliaciones\n🔹Nómina: /nomina\n🔹Planilla de aportes: /planilla\n🔹Certificaciones: /certificaciones\n❓Ingresa el comando /help para volver a ver este mensaje');
+    const userName = ctx.message.from.first_name;
+    ctx.replyWithMarkdown(`🤖*Bienvenido a RRHH BOT, ${userName}*🤖\nEstoy dispuesto ayudarte si tienes dudas sobre la applicación.\n\nPara instrucciones sobre un modulo ingresa el comando correspondiente:\n\n🔹Candidatos: /candidatos \n🔹Empleados: /empleados\n🔹Seguridad social: /afiliaciones\n🔹Nómina: /nomina\n🔹Planilla de aportes: /planilla\n🔹Certificaciones: /certificaciones\n❓Ingresa el comando /help para volver a ver este mensaje`);
 });
 
 //Comando /help
 bot.help((ctx) => {
-    ctx.replyWithMarkdown('🤖*Bienvenido a RRHH BOT*🤖\nEstoy dispuesto ayudarte si tienes dudas sobre la applicación.\n\nPara instrucciones sobre un modulo ingresa el comando correspondiente:\n\n🔹Candidatos: /candidatos \n🔹Empleados: /empleados\n🔹Seguridad social: /afiliaciones\n🔹Nómina: /nomina\n🔹Planilla de aportes: /planilla\n🔹Certificaciones: /certificaciones\n\n❓Ingresa el comando /help para volver a ver este mensaje');
+  const userName = ctx.message.from.first_name;
+  ctx.replyWithMarkdown(`🤖*Bienvenido a RRHH BOT, ${userName}*🤖\nEstoy dispuesto ayudarte si tienes dudas sobre la applicación.\n\nPara instrucciones sobre un modulo ingresa el comando correspondiente:\n\n🔹Candidatos: /candidatos \n🔹Empleados: /empleados\n🔹Seguridad social: /afiliaciones\n🔹Nómina: /nomina\n🔹Planilla de aportes: /planilla\n🔹Certificaciones: /certificaciones\n❓Ingresa el comando /help para volver a ver este mensaje`);
 });
 
 //Mostrar mensaje de saludo
@@ -78,6 +80,35 @@ bot.command('empleados',(ctx)=>{
   ctx.replyWithMarkdown('🤖*Bienvenido al modulo de Empleados*🤖\n\nPara instrucciones sobre un proceso ingresa el comando correspondiente:\n\n🔹Hojas de vida: /hojas\n🔹Contratación: /contratos\n\n❓Ingresa el comando /empleados para volver a ver este mensaje')
 });
 
+//menú seguridad social
+bot.command('afiliaciones',(ctx)=>{
+  ctx.replyWithMarkdown('🤖*Bienvenido al modulo de Seguridad Social*🤖\n\nPara instrucciones sobre un proceso ingresa el comando correspondiente:\n\n🔹Afiliar a ARl: /arl\n🔹Afiliar a caja de compensación: /caja\n\n❓Ingresa el comando /afiliaciones para volver a ver este mensaje')
+});
+
+//arl
+bot.command('arl',(ctx)=>{
+  ctx.replyWithMarkdown('🤖*Afiliación a ARL*🤖\n\nPara afiliar a un empleado a una ARL haz click en el botón ARL y serás redirigido a la página ofical de ARL SURA donde seguirás con el proceso')
+});
+
+//caja de compensación
+bot.command('caja',(ctx)=>{
+  ctx.replyWithMarkdown('🤖*Afiliación a caja de compensación*🤖\n\nPara afiliar a un empleado a una caja de compensación haz click en el botón caja de compensación y serás redirigido a la página ofical de Compensar donde seguirás con el proceso')
+});
+
+//planilla de aportes
+bot.command('planilla',(ctx)=>{
+  ctx.replyWithMarkdown('🤖*Planilla de aportes*🤖\n\nEste módulo aún no está hecho, así que no sé como funciona 🚫')
+});
+
+//Nomina
+bot.command('nomina',(ctx)=>{
+  ctx.replyWithMarkdown('🤖*Modulo de Nomina*🤖\n\nEste módulo aún no está hecho, así que no sé como funciona 🚫')
+});
+
+//certificaciones
+bot.command('certificaciones',(ctx)=>{
+  ctx.replyWithMarkdown('🤖*Modulo de Certificaciones*🤖\n\nPara generar un certificado de empleo, ingresa la información del empleado solicitada y da click a descargar, el certificado se descargará automaticamente en tu computador.')
+});
 
 
 
@@ -88,20 +119,22 @@ bot.command('empleados',(ctx)=>{
 
 
 
-
-
-
+//Respuesta a stickers
+bot.on('sticker', (ctx) => {
+  // Code to handle the received sticker
+  ctx.reply('Bonito sticker!, recuerda ingresar /help para ver las instrucciones');
+});
 
 
 //Respuesta a cualquier texto diferente y emojis.
 bot.on('message', (ctx) => {
   const messageText = ctx.message.text;
-  
+
   // Check if the message consists solely of an emoji
   if (isEmoji(messageText)) {
     ctx.reply('🤖');
   } else {
-    ctx.reply(' No entiendo los que dices, recuerda utilizar el comando /help para ver las instrucciones')
+    ctx.reply(' No entiendo los que dices, recuerda utilizar el comando /help para ver las instrucciones o comprueba si escribiste el comando de forma correcta')
     console.log('Received message:', ctx.message.text);
   }
 });

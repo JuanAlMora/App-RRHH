@@ -22,4 +22,17 @@ Comandos para el bot:
 			/eliminarH -> como eliminar una hoja de vida DONE
 		/contratos -> abre instructivo de contratación. ON WAIT
 
+	/afiliaciones -> abre el menú de seguridad social DONE
+		/arl ->abre instructivo de afilicación a ARL DONE
+		/caja -> abre instructivo de afiliacion a caja de compensación DONE
+
+	/planilla -> abre el instructivo de planilla de aportes ON WAIT
+
+	/nomina -> abre el menú de nómina ON WAIT
+
+	/certificaciones -> abre el instrcutivo de aafiliaciones DONE
+
+
+	
+
  
