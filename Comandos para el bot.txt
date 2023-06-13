@@ -9,10 +9,10 @@ Comandos para el bot:
 			/actualizarH -> como actuliaziar o editar una hoja de vida. DONE
 			/eliminarH -> como eliminar una hoja de vida DONE
 		/vacantes -> abre instructivo de vacantes. DONE
-		/pruebas -> abre instructivo de pruebas psicotecnicas. ON WAIT
+		/pruebas -> abre instructivo de pruebas psicotecnicas. CANCELADO
 		/antecedentes -> abre instructivo de antecedentes. DONE
-		/examenes -> abre instructivo de examenes médicos. ON WAIT
-		/contratos -> abre instructivo de contratación. ON WAIT
+		/examenes -> abre instructivo de examenes médicos. CANCELADO
+		/contratos -> abre instructivo de contratación. DONE
 
 	/empleados -> abre el menú de empleado
 		/hojas -> abre instrcutivo de hojas de vida. DONE
@@ -20,15 +20,17 @@ Comandos para el bot:
 			/consultarH -> como consultar una hoja de vida. DONE
 			/actualizarH -> como actuliaziar o editar una hoja de vida. DONE
 			/eliminarH -> como eliminar una hoja de vida DONE
-		/contratos -> abre instructivo de contratación. ON WAIT
+		/contratos -> abre instructivo de contratación. DONE
 
 	/afiliaciones -> abre el menú de seguridad social DONE
 		/arl ->abre instructivo de afilicación a ARL DONE
 		/caja -> abre instructivo de afiliacion a caja de compensación DONE
 
-	/planilla -> abre el instructivo de planilla de aportes ON WAIT
+	/planilla -> abre el instructivo de planilla de aportes DONE
 
-	/nomina -> abre el menú de nómina ON WAIT
+	/nomina -> abre el menú de nómina DONE
+		/despredibles -> abre instructivo para generar desprendible DONE
+		/editarN -> abre instructivo para editar datos de nómina DONE
 
 	/certificaciones -> abre el instrcutivo de aafiliaciones DONE
 

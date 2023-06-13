@@ -24,54 +24,38 @@
                         <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
                         <!--<path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"></path> -->
                     <!-- </svg>Siguiente</button> -->
-                <form style="margin-top: 50px;margin-left: 100px;" method="POST" action="">
+                {{#each rows}}
+                <form style="margin-top: 50px;margin-left: 100px;" method="POST" action="/editarNomina">
                     <div class="card" style="padding-left: 22px;margin-left: 19px;width: 1000px;">
                         <div class="card-body" style="padding-left: 0px;margin-left: 10px;padding-right: 0px;margin-right: 10px;">
                             <h6><span style="color: rgb(1, 120, 239);">Complete los campos requeridos*</span></h6>
+
+                            
                             <div class="row" id="fila1">
-                                {{#each fotos}}
+    
                                 <div class="col" id="colFoto">
                                     <div><img style="width: 250px;height: 250px;margin: 10px;" width="250" height="242" src={{foto}} alt="Imagen"</div>
                                 </div>
-                                {{/each}}
+                            
                                 <div class="col align-items-center align-items-stretch" id="col2">
                                     <div class="row" id="rowSalario">
                                         <div class="col" id="colSalario">
-                                            <div><label class="form-label"><strong>Salario bruto: *</strong></label><input class="form-control" type="text" placeholder="$ 1000000" required=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="row" id="rowDeduccion">
-                                        <div class="col" id="colDeduccion" style="margin-top: 30px;">
-                                            <div><label class="form-label"><strong>Deducción por caja de compensación: *</strong></label><input class="form-control" type="text" placeholder="$ 100000" required=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col" id="col3">
-                                    <div class="row">
-                                        <div class="col">
-                                            <div><label class="form-label"><strong>Deducción por ARL: *</strong></label><input class="form-control" type="text" placeholder="$ 150000" required=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div style="margin-top: 30px;"><label class="form-label"><strong>Impuesto:&nbsp;</strong></label><input class="form-control" type="text" placeholder="0 %" required=""></div>
+                                            <div><label class="form-label"><strong>Salario bruto: *</strong></label><input class="form-control" type="text" placeholder="$ 1000000" name="salario" required=""></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row" id="fila2">
-                                {{#each row}}
                                 <div class="col" id="colDocumento">
-                                    <div><label class="form-label"><strong>Nombre:&nbsp;</strong></label><input class="form-control" type="text" value={{nombre}} placeholder={{nombre}} name="nombre" required="" style="width: 250px;margin: 10px;"></div>
+                                    <div><label class="form-label"><strong>Nombre:&nbsp;</strong></label><p style="width: 250px;margin: 10px;">{{nombre}}</p></div>
                                 </div>
-                                {{/each}}
+                               
                             </div>
                             <div class="row" id="fila3">
-                                {{#each row}}
+                               
                                 <div class="col" id="colCedula">
-                                    <div><label class="form-label"><strong>Documento de identidad:&nbsp;</strong></label><input class="form-control" type="text" value={{documento}}  placeholder={{documento}} name="documento" style="margin: 10px;width: 250px;"></div>
+                                    <div><label class="form-label"><strong>Documento de identidad:&nbsp;</strong></label><p style="margin: 10px;width: 250px;">{{documento}}</p></div>
                                 </div>
-                                {{/each}}
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -81,6 +65,7 @@
                         </div>
                     </div>
                 </form><!-- <button class="btn btn-danger" type="reset" style="position: relative;margin: 20px;left: 900px;">Finalizar cambios</button> -->
+                {{/each}}
             </div>
         </div>
     </div>

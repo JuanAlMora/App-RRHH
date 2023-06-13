@@ -49,6 +49,8 @@ app.use(require('./routes/vacancies'));
 app.use(require('./routes/add_vacancy'));
 app.use(require('./routes/paycheck_menu'));
 app.use(require('./routes/paycheck_edit'));
+app.use(require('./routes/paycheck_exe'));
+app.use(require('./routes/contract'));
 
 //Publics
 app.use(express.static(path.join(__dirname,'public')));

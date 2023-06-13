@@ -27,7 +27,7 @@
         </div>
         <div class="row" style="padding-bottom: 0px;margin-bottom: 0px;margin-right: 0px;margin-left: 0px;width: 100%;height: 100%;">
             <div class="col-3 col-sm-2 col-md-1 col-lg-1 col-xl-1 col-xxl-1 offset-lg-0" id="barraMenu" style="background: #484850;border-style: none;color: rgb(255,255,255);padding: 0px;height: 100%;min-height: 100%;max-height: 100%;margin-bottom: 0px;padding-bottom: 0px;width: 100.5px;">
-                <div><a id="botonSalir-1" href="menuPrincipal.html" style="width: auto;color: rgb(255,255,255);"><i class="typcn typcn-arrow-back" style="font-size: 93px;padding-left: 0px;"></i></a></div>
+                <div><a id="botonSalir-1" href="/menuPrincipal" style="width: auto;color: rgb(255,255,255);"><i class="typcn typcn-arrow-back" style="font-size: 93px;padding-left: 0px;"></i></a></div>
                 <div id="logo" style="background: rgba(255,255,255,0);height: auto;width: 100%;">
                      <div id="iconoPerfil" style="padding-left: 6px;margin-top: 300px;margin-bottom: 200px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" id="perfilCorbata" style="font-size: 49px;">
                             <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
@@ -53,7 +53,7 @@
                                                     <th class="text-center">ID</th>
                                                     <th class="text-center">Documento</th>
                                                     <th class="text-center">Nombre</th>
-                                                    <th class="text-center">Correo</th>
+                                                    <th class="text-center">Salario</th>
                                                     <th class="text-center">Empleo/cargo</th>
                                                     <th class="text-center filter-false sorter-false">Acciones</th>
                                                 </tr>
@@ -64,18 +64,11 @@
                                                     <td id="{{id}}">{{id}}</td>
                                                     <td>{{documento}}</td>
                                                     <td>{{nombre}}</td>
-                                                    <td>{{correo}}</td>
-                                                    <td>Programador</td>
+                                                    <td>{{salario}}</td>
+                                                    <td>{{nombre_contrato}}</td>
                                                     <td class="text-center align-middle" style="max-height: 60px;height: 60px;">
-
-                                                        <a class="btn btnMaterial btn-flat primary semicircle" role="button" onclick="enviarValor('{{id}}')" href="/detallesCandidato">
-                                                            <i class="far fa-eye"></i>
-                                                        </a>
                                                         <a class="btn btnMaterial btn-flat success semicircle" role="button" onclick="enviarValorLapiz('{{id}}')" href="/editarNomina">
                                                             <i class="fas fa-pen"></i>
-                                                        </a>
-                                                        <a class="btn btnMaterial btn-flat accent btnNoBorders checkboxHover" role="button" style="margin-left: 5px;" data-bs-toggle="modal" onclick="enviarBorrar('{{id}}')" href="/eliminarCandidato">
-                                                            <i class="fas fa-trash btnNoBorders" style="color: #DC3545; "></i>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -86,10 +79,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><button class="btn btn-primary" type="button" style="position: relative;left: 750px;margin-top: 10px;margin-left: 60px;width: 200px;background: #004a7c;border-radius: 20px;text-align: left;">Siguiente<svg xmlns="http://www.w3.org/2000/svg" viewBox="-128 0 512 512" width="1em" height="1em" fill="currentColor" style="position: relative;left: 90px;bottom: 2px;">
+                        </div><form method="get" action="/pagoNomina"><button class="btn btn-primary" type="submit" style="position: relative;left: 750px;margin-top: 10px;margin-left: 60px;width: 200px;background: #004a7c;border-radius: 20px;text-align: center;">Generar pago<svg xmlns="http://www.w3.org/2000/svg" viewBox="-128 0 512 512" width="1em" height="1em" fill="currentColor" style="position: relative;left: 90px;bottom: 2px;">
                                 <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
                                 <path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"></path>
-                            </svg></button>
+                            </svg></button></form>
                     </div>
                 </div>
             </div>

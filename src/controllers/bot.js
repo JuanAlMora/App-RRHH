@@ -72,7 +72,7 @@ bot.command('examenes', (ctx) => {
 
 //Contratación
 bot.command('contratos' , (ctx) => {
-  ctx.replyWithMarkdown('🤖*Modulo de contratación*🤖\n\nEste módulo aún no está hecho, así que no sé como funciona 🚫')
+  ctx.replyWithMarkdown('🤖*Modulo de contratación*🤖\n\nPara contratar un candidato da click en el botón ✅')
 });
 
 //menú Empleados
@@ -97,12 +97,20 @@ bot.command('caja',(ctx)=>{
 
 //planilla de aportes
 bot.command('planilla',(ctx)=>{
-  ctx.replyWithMarkdown('🤖*Planilla de aportes*🤖\n\nEste módulo aún no está hecho, así que no sé como funciona 🚫')
+  ctx.replyWithMarkdown('🤖*Planilla de aportes*🤖\n\nPara acceder a la planilla de aportes da click en el botón de planilla de aportes en el menú principal y serás redirigido a la pagina aportesenlinea.com dode seguirás con el proceso')
 });
 
 //Nomina
 bot.command('nomina',(ctx)=>{
-  ctx.replyWithMarkdown('🤖*Modulo de Nomina*🤖\n\nEste módulo aún no está hecho, así que no sé como funciona 🚫')
+  ctx.replyWithMarkdown('🤖*Modulo de Nomina*🤖\n\nPara instrucciones sobre un proceso ingresa el comando correspondiente:\n\n🔹Generar desprendible: /desprendible\n🔹Editar Nomina: /editarN\n\n❓Ingresa el comando /nomina para volver a ver este mensaje')
+});
+
+bot.command('editarN',(ctx)=>{
+  ctx.replyWithMarkdown('🤖*Editar Nomina*🤖\n\nPara editar la nomina haz click en el botón del lapiz en la lista de nómina y rellena la información solicitada, ahora deberías ver la información actualizada en la lista de nómina.')
+});
+
+bot.command('desprendible',(ctx)=>{
+  ctx.replyWithMarkdown('🤖*Generar desprendible*🤖\n\nPara generar un desprendible de nómina haz click en el botón generar desprendible, este se descargará automaticamente')
 });
 
 //certificaciones
@@ -110,8 +118,12 @@ bot.command('certificaciones',(ctx)=>{
   ctx.replyWithMarkdown('🤖*Modulo de Certificaciones*🤖\n\nPara generar un certificado de empleo, ingresa la información del empleado solicitada y da click a descargar, el certificado se descargará automaticamente en tu computador.')
 });
 
+
+
 //Respuesta a stickers
 bot.on('sticker', (ctx) => {
+  
+  
   // Code to handle the received sticker
   ctx.reply('Bonito sticker!, recuerda ingresar /help para ver las instrucciones');
 });
